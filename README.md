@@ -1,4 +1,4 @@
-# Instroções para instalação do Sistema.
+# Introduções para instalação do Sistema.
 
 Comando para subir o container docker com a imagem do PostgresSQL
 
