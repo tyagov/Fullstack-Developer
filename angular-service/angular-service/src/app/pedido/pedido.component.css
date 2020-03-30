@@ -1,0 +1,186 @@
+
+h1{
+    font-family: Euclid Circular B-Bold;
+    font-size: 24px;
+    color: #000000;
+    padding-top: 20px;
+}
+h2{
+    font-family: Euclid Circular B-Bold;
+    font-size: 22.75px;
+    color: #373A3C;
+    line-height: 24px;
+    padding-top: 20px;
+}
+h3{
+    font-family: Euclid Circular B-Regular;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.4); 
+}
+
+mat-list {
+  flex-grow: 1;
+  overflow: auto;
+  max-height: 500px;
+  overflow-x: hidden;
+}
+.botaoRemover:hover{
+  background-color: #FFFFFF;
+}
+.botaoRemoverProduto{
+  width: 21px;
+  height: 21px;
+  margin-bottom: 30px;
+}
+.divCarrinhoVazio{
+    text-align: center;
+}
+.imgPedido{
+    margin-right: 10.51px;
+    margin-bottom: 8px;
+    height: 30px;
+}
+.carCliente{
+    height: 152.66px;
+}
+.cardCarrinho{
+    height: 455px;
+}
+.cardTotal{
+    height: 250px;
+}
+
+.mat-card:not([class*=mat-elevation-z]){
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    margin-bottom: 28.34px;
+}
+
+
+
+.formPedido {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+.h3Total{
+    font-family: Euclid Circular B-Regular;
+    font-size: 20px;
+    line-height: 30px;
+    align-items: flex-end;
+    text-align: right;
+
+    color: #373A3C;
+}
+  
+  .inputFormPedido {
+    width: 100%;
+  }
+  hr{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 155%;
+  }
+  .spanCodigoProduto{
+    font-family: Euclid Circular B-Regular;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-end;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .spanNomeProduto{
+    font-family: Euclid Circular B-Regular;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .inputQuantidadeProduto{
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Euclid Circular B-Regular;
+    font-size: 16px;
+    line-height: 20px;
+    color: #999999;
+    width: 32px;
+    height: 31px;
+  }
+  .spanValorProduto{
+    font-family: Euclid Circular B-Regular;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 14px;
+    margin-right: 80px;
+    align-items: flex-end;
+    text-align: right;
+    color: #373A3C;
+  }
+  .spanValorTotalProduto{
+    font-family: Euclid Circular B-Regular;
+    font-size: 20px;
+    line-height: 30px;
+    align-items: flex-end;
+    text-align: right;
+    color: #373A3C;
+  }
+ 
+
+  .buttonFinalizarPedido{
+    font-family: Euclid Circular B-Regular;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    background: #5CB85C;
+    border-radius: 4px; 
+    width: 100%;
+  }
+  .buttonLimparCarrinho{
+    font-family: Euclid Circular B-Regular;
+    font-size: 20px;
+    line-height: 25px;  
+    color: #000000;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+  }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+ 
+
+@font-face {
+    font-family: Euclid Circular B-Bold;
+    src: url(../../assets/fontes/EuclidCircularB-Bold.otf) format("opentype");
+  }
+  @font-face {
+    font-family: Euclid Circular B-Regular;
+    src: url(../../assets/fontes/EuclidCircularB-Regular.otf) format("opentype");
+  }

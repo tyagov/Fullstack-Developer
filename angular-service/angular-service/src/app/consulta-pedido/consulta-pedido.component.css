@@ -1,0 +1,42 @@
+h1{
+    font-family: Euclid Circular B-Bold;
+    margin-top: 30px;
+    font-size: 26px;
+    line-height: 30px;
+    color: #373A3C;
+}
+.imgPedidos{
+    margin-right: 10.51px;
+    margin-bottom: 5px;
+    height: 20px;
+}
+.mat-row{
+    font-family: Euclid Circular B-Regular;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2A2C2E;
+}
+h2{
+    font-family: Euclid Circular B-Bold;
+    font-size: 22.75px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    color: #373A3C;
+}
+.consultarPedidoCard{
+    margin-top: 24px;
+    height: 600px;
+    background: #FFFFFF;   
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;    
+}
+
+@font-face {
+    font-family: Euclid Circular B-Bold;
+    src: url(../../assets/fontes/EuclidCircularB-Bold.otf) format("opentype");
+  }
+  @font-face {
+    font-family: Euclid Circular B-Regular;
+    src: url(../../assets/fontes/EuclidCircularB-Regular.otf) format("opentype");
+  }

@@ -1,0 +1,85 @@
+<div class="container">
+    <h1>Novo pedido #{{codigoPedido}}</h1>
+    <mat-card class="carCliente">
+        <form class="formPedido">
+            <h2><img src="./assets/icones/icone-cliente.png" class="imgPedido">Cliente</h2>
+            <mat-form-field class="inputFormPedido">
+                <input type="text" placeholder="Informe um cliente" aria-label="Number" matInput
+                    [formControl]="clienteFormControl" [matAutocomplete]="cliente">
+                <mat-icon matSuffix>search</mat-icon>
+                <mat-autocomplete #cliente="matAutocomplete">
+                    <mat-option *ngFor="let clientes of clientes" [value]="clientes.nome">
+                        {{clientes.codigo}} - {{clientes.nome}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </mat-card>
+    <mat-card class="cardCarrinho">
+        <form class="formPedido">
+            <h2><img src="./assets/icones/icone-carrinho.png" class="imgPedido">Carrinho</h2>
+            <mat-form-field class="inputFormPedido">
+                <input type="text" placeholder="Pesquise um produto" aria-label="Number" matInput
+                    [formControl]="produtoFormControl" [matAutocomplete]="produto">
+                <mat-icon matSuffix>search</mat-icon>
+                <mat-autocomplete #produto="matAutocomplete">
+                    <mat-option *ngFor="let produtos of produtos" (click)="addCarrinho(produtos)"
+                        [value]="produtos.nome">
+                        {{produtos.codigo}} - {{produtos.nome}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+        <div class="divCarrinhoVazio">
+            <img *ngIf="isEmptyObject()" src="./assets/icones/carrinho-vazio.png" />
+            <div *ngFor="let produto of produtoAdicionado" style="width: 100%;" class="row">
+                <hr style="width: 100%;">
+                <div style="width: 50%; text-align: justify;" class="column">
+                    <div class="row">
+                        <div style="width: 15%; margin-left: 40px; margin-top: 30px;" class="column">
+                            <img style="width: 60px; height: 60px;" src="./assets/icones/{{produto.codigo}}.png" />
+                        </div>
+                        <div style="width: 77%;" class="column">
+                            <p class="spanCodigoProduto">{{produto.codigo}}</p>
+                            <p class="spanNomeProduto">{{produto.nome}}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="width: 50%; text-align: end;" class="column">
+                    <input class="inputQuantidadeProduto" type="number" min="0" value="{{produto.quantidadeProduto}}"
+                        (keyup)="calcularValorTotal($event.target.value, produto)" aria-label="Number">
+                    <span class="spanValorProduto">x {{produto.precoUnitario | currency: 'BRL'}}</span> <br>
+                    <span class="spanValorTotalProduto">{{produto.valorTotal | currency: 'BRL'}}</span>
+                    <button mat-button class="botaoRemover" (click)="removerCarrinho(produto)"><img
+                            class="botaoRemoverProduto" src="./assets/icones/icone-apagar.png" /></button>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card class="cardTotal">
+        <h2 style="margin-bottom: -40px;"><img src="./assets/icones/icone-total.png" class="imgPedido">Total</h2>
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+                <div class="container" style="width: 50;">
+                    <h3>Itens</h3>
+                    <h3>Frete</h3>
+                    <hr />
+                    <h3>Total</h3>
+                </div>
+                <div class="container" style="width: 50%; text-align: end;">
+                    <h3 class="h3Total">{{valorTotal | currency: 'BRL'}}</h3>
+                    <h3 class="h3Total">{{freteTotal | currency: 'BRL'}}</h3>
+                    <h3 class="h3Total">{{totalPedido | currency: 'BRL'}}</h3>
+                </div>
+
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="container" style="width: 50;">
+                    <button mat-button class="buttonFinalizarPedido" [disabled]="1 > produtoAdicionado.length" (click)="gravarPedito()">Finalizar pedido</button>
+                    <button mat-button class="buttonLimparCarrinho" (click)="limparCarrinho()">Limpar carrinho</button>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-card>
+</div>

@@ -1,0 +1,14 @@
+<div class="divNavBar">
+  <img src="./assets/icones/logotipo-maximatech.png" alt="Maximatech" width="100px">
+  <button mat-button [matMenuTriggerFor]="menu">Cadastro</button>
+  <mat-menu #menu="matMenu" class="teste">
+    <button mat-menu-item>Cliente</button>
+    <button mat-menu-item>Produto</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu2">Pedido</button>
+  <mat-menu #menu2>
+    <button mat-menu-item routerLink="/pedido">Novo Pedido</button>
+    <button mat-menu-item routerLink="/consultaPedido">Consulta Pedido</button>
+  </mat-menu>
+</div>
