@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Fullstack-Developer.iml" filepath="$PROJECT_DIR$/.idea/Fullstack-Developer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../angular-service/angular-service.iml" filepath="$PROJECT_DIR$/../angular-service/angular-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../api/api.iml" filepath="$PROJECT_DIR$/../api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../api-gateway-zuul/api-gateway-zuul.iml" filepath="$PROJECT_DIR$/../api-gateway-zuul/api-gateway-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/../discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../frete-service/frete-service.iml" filepath="$PROJECT_DIR$/../frete-service/frete-service.iml" />
+    </modules>
+  </component>
+</project>
