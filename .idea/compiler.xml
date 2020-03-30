@@ -6,10 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="frete-service" />
-        <module name="api" />
-        <module name="discovery-server" />
-        <module name="api-gateway-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
